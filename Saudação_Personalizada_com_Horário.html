@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Saudação Personalizada com Horário</title>
+    </head>
+    <body>
+        <h1>Saudação Personalizada com Horário</h1>
+        <input type="text" id="nameUser" placeholder="Digite seu nome.">
+        <input type="number" id="hr" placeholder="Digite a hora aqui.">
+        <button onclick="saudacao()">Confirmar</button>
+        <script>
+            function saudacao() {
+                if (document.getElementById("hr").value >= 19)
+                document.getElementById("resultado").innerText = "Olá, Boa noite " + document.getElementById("nameUser").value + "!"
+                else if (document.getElementById("hr").value >= 12)
+                document.getElementById("resultado").innerText = "Olá, Boa tarde " + document.getElementById("nameUser").value + "!"
+                else if (document.getElementById("hr").value >= 5)
+                document.getElementById("resultado").innerText = "Olá, Bom dia " + document.getElementById("nameUser").value + "!"
+                else
+                document.getElementById("resultado").innerText = "Olá, Boa noite " + document.getElementById("nameUser").value + "!"
+            }
+        </script>
+        <div id="resultado"></div>
+    </body>
+</html>
