@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Contador de cliques com Reset</title>
+    </head>
+    <body>
+        <h1>Contador de cliques com Reset</h1>
+
+        <div id="cliques">
+        </div>
+        <script>
+            
+            let contador = 1
+            function adicionar() {
+                let add = contador++
+                document.getElementById("cliques").innerText = add
+            }
+            function reset() {
+                document.getElementById("cliques").innerHTML = ""
+                contador = 1
+            }
+        </script>
+        <button onclick="adicionar()">Clique</button>
+        <button onclick="reset()">Resetar</button>
+    </body>
+</html>
