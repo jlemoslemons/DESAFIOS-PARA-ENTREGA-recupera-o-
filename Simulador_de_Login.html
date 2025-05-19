@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Simulador de Login</title>
+    </head>
+    <body>
+        <h1>Simulador de Login</h1>
+        <h3>Nome:</h3>
+        <input type="text" id="inputUser" placeholder="User">
+        <h3>Senha:</h3>
+        <input type="password" id="inputSenha" placeholder="Senha">
+        <button onclick="login()">Login</button>
+        <script>
+            const user = "jlemos";
+            const senha = "lemons";
+
+            function login() {
+                let validarNome = document.getElementById("inputUser").value;
+                let validarSenha = document.getElementById("inputSenha").value;
+                let resultadoDiv = document.getElementById("resultado");
+
+                if (validarNome === user && validarSenha === senha) {
+                    resultadoDiv.innerText = "Login realizado com sucesso.";
+                } else {
+                    resultadoDiv.innerText = "Usuário ou senha inválidos.";
+                }
+            }
+        </script>
+        <p></p>
+        <div id="resultado">
+        </div>
+    </body>
+</html>
